@@ -33,8 +33,7 @@ void create() {
   colours = new ArrayList<Integer>();
 
   for (int x = 0 ; x < rows * columns; x++ ) {
-    int modifier = round(random(-100, 50));
-    cube = new HEC_Box().setDepth(cubeSize+modifier).setHeight(cubeSize+modifier).setWidth(cubeSize+modifier);
+    cube = new HEC_Box().setDepth(cubeSize+round(random(-100, 50))).setHeight(cubeSize+round(random(-100, 50))).setWidth(cubeSize+round(random(-100, 50)));
     mesh = new HE_Mesh(cube);
 
     HE_FaceIterator fitr = mesh.fItr();
