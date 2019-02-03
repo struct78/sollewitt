@@ -13,7 +13,7 @@ ArrayList<Integer> colours;
 
 int rows = 3;
 int columns = 7;
-int gutter = 50;
+int gutter = 100;
 int cubeSize;
 float theta = 0.01;
 
@@ -33,7 +33,7 @@ void create() {
   colours = new ArrayList<Integer>();
 
   for (int x = 0 ; x < rows * columns; x++ ) {
-    int modifier = round(random(-60, 0));
+    int modifier = round(random(-100, 50));
     cube = new HEC_Box().setDepth(cubeSize+modifier).setHeight(cubeSize+modifier).setWidth(cubeSize+modifier);
     mesh = new HE_Mesh(cube);
 
